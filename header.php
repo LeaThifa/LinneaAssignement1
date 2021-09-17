@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Labb 1</title>
-    <?php wp_head();?>
+    <?php wp_head(); //Hooks in scripts that runs from functions.php?>
 </head>
 <body>
 

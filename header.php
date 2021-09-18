@@ -47,7 +47,19 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
-						<ul class="menu">
+
+					<?php 
+					wp_nav_menu(
+
+						//Display navigation menu and apply classes for css
+						array(
+							"theme_location" => "top-menu",
+							"menu_class" => "menu", "current-menu-item",
+						)
+
+						);?>
+						
+						<!-- <ul class="menu">
 							<li class="current-menu-item">
 								<a href="index.html">Hem</a>
 							</li>
@@ -69,7 +81,8 @@
 							<li>
 								<a href="kontakt.html">Kontakt</a>
 							</li>
-						</ul>
+						</ul> -->
+
 					</div>
 				</div>
 			</div>

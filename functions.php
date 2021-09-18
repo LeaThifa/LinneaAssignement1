@@ -6,7 +6,7 @@ include(get_theme_file_path("/includes/frontend/enqueue.php"));
 add_action("wp_enqueue_scripts", "style_enqueue");
 
 //Enqueue scripts - JQuery, script.js
-add_action("wp_enqueue_scripts", "js_enqueue")
+add_action("wp_enqueue_scripts", "js_enqueue");
 
 
 ?>

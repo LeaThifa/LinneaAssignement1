@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Labb 1</title>
+	<!-- <title>Labb 1</title> -->
     <?php wp_head(); //Hooks in scripts that runs from functions.php?>
 </head>
 <body>
@@ -51,37 +51,13 @@
 					<?php 
 					wp_nav_menu(
 
-						//Display navigation menu and apply classes for css
+						//Display navigation menu and apply css classes
 						array(
 							"theme_location" => "top-menu",
 							"menu_class" => "menu", "current-menu-item",
 						)
 
 						);?>
-						
-						<!-- <ul class="menu">
-							<li class="current-menu-item">
-								<a href="index.html">Hem</a>
-							</li>
-							<li>
-								<a href="blogg.html">Blogg</a>
-							</li>
-							<li>
-								<a href="undersida.html">Undersida</a>
-							</li>
-							<li>
-								<a href="undersida2.html">Undersida 2</a>
-							</li>
-							<li>
-								<a href="undersida3.html">Undersida 3</a>
-							</li>
-							<li>
-								<a href="undersida4.html">Undersida 4</a>
-							</li>
-							<li>
-								<a href="kontakt.html">Kontakt</a>
-							</li>
-						</ul> -->
 
 					</div>
 				</div>

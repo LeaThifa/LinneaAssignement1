@@ -23,7 +23,7 @@
                                     <a href="forfattare.html"><?php the_author(); ?></a>
                                 </li>
                                 </ul>
-                                <p><?php the_excerpt(); ?></p>
+                                <p><?php the_content(); ?></p>
                             </article>
                         </div>
                     </div>

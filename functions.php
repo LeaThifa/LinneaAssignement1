@@ -9,17 +9,20 @@ add_action("wp_enqueue_scripts", "lea_style_enqueue");
 add_action("wp_enqueue_scripts", "lea_js_enqueue");
 
 
-//Adding dynamic title (edible in wp dashboard)
-function lea_dynamic_title(){
+//Theme support
+function lea_theme_support(){
+
     //Title support
     add_theme_support("title-tag");
+
+    //Menu support
+    add_theme_support("menus");
+
+    //Thumbnail support
+    add_theme_support("post-thumbnail");
 }
 
-add_action("after_setup_theme", "lea_dynamic_title");
-
-
-//Menu support
-add_theme_support("menus");
+add_action("after_setup_theme", "lea_theme_support");
 
 
 //Register menus
@@ -29,7 +32,6 @@ register_nav_menus(
 
     )
 );
-
 
 
 ?>

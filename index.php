@@ -40,11 +40,14 @@ Template Name: Blogg
                                 } 
                             } 
                         ?>
-                            
+                        <nav class="navigation pagination">
+                            <?php echo paginate_links(); ?>
+                        </nav>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
+       
 
 <?php get_footer(); ?>

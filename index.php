@@ -41,7 +41,14 @@ Template Name: Blogg
                             } 
                         ?>
                         <nav class="navigation pagination">
-                            <?php echo paginate_links(); ?>
+                        <?php 
+                            echo paginate_links( array(
+
+                            "prev_text" => "<span>Förgående</span>",
+                            "next_text" => "<span>Nästa</span>"
+                        ));
+                        ?> 
+                        
                         </nav>
                         </div>
                     </div>

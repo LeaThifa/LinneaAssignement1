@@ -1,16 +1,22 @@
-<?php get_header(); ?>
-
-
-<?php while(have_posts()){
-
-    the_post();
-}             
+<?php 
+/*
+Template Name: Post
+*/
 ?>
+
+<?php get_header(); ?>
         <main>
 			<section>
 				<div class="container">
 					<div class="row">
 						<div id="primary" class="col-xs-12 col-md-9">
+                        <?php
+                            if ( have_posts() ) {
+	                            while ( have_posts() ) {
+		                            the_post(); 
+	                            } 
+                            }                
+                        ?>
                             <article>
                                 <img src="<?php echo get_the_post_thumbnail_url(); ?>" />
                                     <h2 class="title"><?php the_title(); ?></h2>

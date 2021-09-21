@@ -1,3 +1,9 @@
+<?php 
+/*
+Template Name: Landing Page
+*/
+?>
+
 <?php get_header(); ?>
 
 <?php $hero = get_field("hero"); //Connects acf plugin - Changes can be made in text -> pages -> Home ?>

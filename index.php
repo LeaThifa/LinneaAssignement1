@@ -11,7 +11,8 @@ Template Name: Blogg
 				<div class="container">
 					<div class="row">
 						<div id="primary" class="col-xs-12 col-md-9">
-
+                            <!-- Wordpress function that gets page name dynamically -->
+                            <h1><?php wp_title(''); ?></h1>
                         <?php
                             if ( have_posts() ) {
 	                            while ( have_posts() ) { 
@@ -48,9 +49,49 @@ Template Name: Blogg
                             "next_text" => "<span>Nästa</span>"
                         ));
                         ?> 
-                        
                         </nav>
-                        </div>
+                    </div>
+                        <!-- Side menu for Blogg page -->
+
+                
+        <aside id="secondary" class="col-xs-12 col-md-3">
+          <div id="sidebar">
+            <ul>
+              <li>
+                <form id="searchform" class="searchform">
+                  <div>
+                    <label class="screen-reader-text">Sök efter:</label>
+                    <input type="text" />
+                    <input type="submit" value="Sök" />
+                  </div>
+                </form>
+              </li>
+            </ul>
+            <ul role="navigation">
+              <li class="pagenav">
+                <h2>Sidor</h2>
+                 <ul class=""> 
+                  <!-- Menu for getting the side menu in Blog page -->
+                <?php wp_nav_menu( array(
+                        "theme_location" => "blog-menu", 
+                        "menu_class" => "page_item"
+                        )
+                    ); 
+                ?>
+                        
+             
+                <h2>Arkiv</h2>
+                
+              <li class="categories">
+                <h2>Kategorier</h2>
+                </li>
+              </ul>
+          </div>
+        </aside>	
+                        
+                        <!-- End side menu -->
+                        
+                     
                     </div>
                 </div>
             </section>

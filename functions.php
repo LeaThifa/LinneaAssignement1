@@ -12,9 +12,6 @@ add_action("wp_enqueue_scripts", "lea_js_enqueue");
 //Theme support
 function lea_theme_support(){
 
-    //Title support
-    add_theme_support("title-tag");
-
     //Menu support
     add_theme_support("menus");
 
@@ -29,9 +26,10 @@ add_action("after_setup_theme", "lea_theme_support");
 register_nav_menus(
     array(
         "top-menu" => __("Top Menu", "theme"),
-
+        "blog-menu" => __("Blog Meny", "theme")
     )
 );
 
 
 ?>
+

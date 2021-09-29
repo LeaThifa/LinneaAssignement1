@@ -13,7 +13,7 @@ Template Name: Blogg
 						<div id="primary" class="col-xs-12 col-md-9">
                             <!-- Wordpress function that gets page name dynamically -->
                             <h1><?php wp_title(''); ?></h1>
-                            
+
                             <!-- Loop that looks and displays posts -->
                             <?php
                             if ( have_posts() ) {
@@ -32,9 +32,14 @@ Template Name: Blogg
                                         <i class="fa fa-calendar"></i><?php the_date("F d, Y"); ?>
                                     </li>
                                     <li>
-                                    <i class="fa fa-user"></i>
-                                    <a href="forfattare.html"><?php the_author(); ?></a>
-                                </li>
+                                        <i class="fa fa-user"></i>
+                                        <a href="forfattare.html"><?php the_author(); ?></a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-tag"></i>
+                                        <!-- Displays the categories -->
+                                        <?php echo get_the_category_list(", ");?>
+                                    </li>
                                 </ul>
                                 <p><?php the_excerpt(); ?></p>
                             </article>
@@ -43,6 +48,7 @@ Template Name: Blogg
                                 } 
                             } 
                         ?>
+
                         <nav class="navigation pagination">
                         <?php 
                             echo paginate_links( array(
@@ -83,16 +89,26 @@ Template Name: Blogg
 
                 <h2>Arkiv</h2>
                 
-              <li class="categories">
+                <li class="categories">
                 <h2>Kategorier</h2>
-                </li>
-             
+                <ul>
+
+                <?php
+                    //  Getting the categories 
+                    $categories = get_categories( array(
+                    'orderby' => 'name',
+                      ) 
+                    );
+                    // Loop that count how many posts are in a category
+                    foreach( $categories as $category ) {
+                        echo '<li class="cat-item min-egen-class"><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a><span class="text-white"> (' . $category->category_count . ')' . '</span></li>';
+                    } 
+                ?>
+                </ul>
           </div>
         </aside>	
-                        
                         <!-- End side menu -->
                         
-                     
                     </div>
                 </div>
             </section>

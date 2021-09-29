@@ -22,7 +22,7 @@ Template Name: Archive
                             <article>
                                 <img src="<?php echo get_the_post_thumbnail_url(); ?>" />
                                 <h2 class="title">
-                                    <a href="<?php get_permalink(); ?>"><?php the_title(); ?></a>
+                                    <a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
                                 </h2>
                                 <ul class="meta">
                                     <li>
@@ -58,7 +58,6 @@ Template Name: Archive
                 </div>
                 <!-- Side menu for Blogg page -->
 
-
                 <aside id="secondary" class="col-xs-12 col-md-3">
                     <div id="sidebar">
                         <ul>
@@ -75,7 +74,7 @@ Template Name: Archive
                         <ul role="navigation">
                             <li class="pagenav">
                                 <h2>Sidor</h2>
-                                <!-- Menu for getting the side menu in Blog page -->
+                                <!-- Displaying side menu with the class "page_item"-->
                                 <?php wp_nav_menu(array(
                                     "theme_location" => "blog-menu",
                                     "menu_class" => "page_item"
@@ -83,14 +82,14 @@ Template Name: Archive
                                 ?>
 
                                 <h2>Arkiv</h2>
-                                <?php wp_get_archives();?>
+                                <?php wp_get_archives(); ?>
 
                             <li class="categories">
                                 <h2>Kategorier</h2>
                                 <ul>
 
                                     <?php
-                                    //  Getting the categories 
+                                    //  Gets the categories 
                                     $categories = get_categories(array(
                                         'orderby' => 'name',
                                     ));

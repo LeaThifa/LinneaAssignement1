@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8" />
-    <?php wp_head(); //Hooks in scripts that runs from functions.php?>
+	<?php wp_head(); //Hooks in scripts that runs from functions.php
+	?>
 </head>
+
 <body>
 
 	<div id="wrap">
@@ -47,16 +50,16 @@
 				<div class="row">
 					<div class="col-xs-12">
 
-					<?php 
-					wp_nav_menu(
+						<?php
+						wp_nav_menu(
 
-						//Display navigation menu and apply css classes
-						array(
-							"theme_location" => "top-menu",
-							"menu_class" => "menu", "current-menu-item",
-						)
+							//Display navigation menu and apply css classes
+							array(
+								"theme_location" => "top-menu",
+								"menu_class" => "menu", "current-menu-item",
+							)
 
-						);?>
+						); ?>
 
 					</div>
 				</div>

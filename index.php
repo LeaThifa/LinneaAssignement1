@@ -13,11 +13,13 @@ Template Name: Blogg
 						<div id="primary" class="col-xs-12 col-md-9">
                             <!-- Wordpress function that gets page name dynamically -->
                             <h1><?php wp_title(''); ?></h1>
-                        <?php
+                            
+                            <!-- Loop that looks and displays posts -->
+                            <?php
                             if ( have_posts() ) {
 	                            while ( have_posts() ) { 
                                     the_post();
-                        ?>           
+                            ?>           
 
 	                            
                         <article>
@@ -70,7 +72,7 @@ Template Name: Blogg
             <ul role="navigation">
               <li class="pagenav">
                 <h2>Sidor</h2>
-                 <ul class=""> 
+                
                   <!-- Menu for getting the side menu in Blog page -->
                 <?php wp_nav_menu( array(
                         "theme_location" => "blog-menu", 
@@ -78,14 +80,13 @@ Template Name: Blogg
                         )
                     ); 
                 ?>
-                        
-             
+
                 <h2>Arkiv</h2>
                 
               <li class="categories">
                 <h2>Kategorier</h2>
                 </li>
-              </ul>
+             
           </div>
         </aside>	
                         

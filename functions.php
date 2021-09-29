@@ -26,7 +26,8 @@ add_action("after_setup_theme", "lea_theme_support");
 register_nav_menus(
     array(
         "top-menu" => __("Top Menu", "theme"),
-        "blog-menu" => __("Blog Meny", "theme")
+        "blog-menu" => __("Blog Meny", "theme"),
+        "side-menu" => __("Side Menu", "theme")
     )
 );
 

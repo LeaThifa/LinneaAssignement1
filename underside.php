@@ -15,8 +15,18 @@ Template Name: Underside
           <p>
             <?php the_content();  ?>
           </p>
-          
         </div>
+        <!-- Side menu for underpages -->
+        <aside id="secondary" class="col-xs-12 col-md-3">
+          <ul class="side-menu">
+          
+            <?php wp_nav_menu( array(
+                    "theme_location" => "side-menu",
+                    "menu_class" => "side-menu" )); 
+            ?>
+
+          </ul>
+        </aside>
       </div>
     </div>
   </section>

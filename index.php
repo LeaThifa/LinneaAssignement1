@@ -87,7 +87,8 @@ Template Name: Blogg
                     ); 
                 ?>
 
-                <h2>Arkiv</h2>
+                <h2>Arkiv:</h2>
+                <?php wp_get_archives();?>
                 
                 <li class="categories">
                 <h2>Kategorier</h2>

@@ -362,6 +362,10 @@ article .meta {
 			min-width: 50px;
 		}
 
+	li{
+		list-style-type: none;
+	}
+
 @media ( max-width: 768px ) {
 
 .searchform-wrap label {
